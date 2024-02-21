@@ -10,7 +10,7 @@ import NotFound from "./Links/NotFound/NotFound";
 import Affiliate from "./Links/Affiliates/Affiliate";
 function App() {
   return (
-      <BrowserRouter >
+      <BrowserRouter basename="/reactportfolio">
       <Navibar/>
       <Container>
           <Routes>
