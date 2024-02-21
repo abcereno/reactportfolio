@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/reactportfolio/static/css/main.71468831.css",
+    "main.js": "/reactportfolio/static/js/main.acce0141.js",
+    "static/js/453.bb177003.chunk.js": "/reactportfolio/static/js/453.bb177003.chunk.js",
+    "static/media/miniproject.png": "/reactportfolio/static/media/miniproject.7e1563b0167c887affc0.png",
+    "static/media/majorProject.png": "/reactportfolio/static/media/majorProject.96b3c2c8934bad30c3d6.png",
+    "static/media/restaurant.png": "/reactportfolio/static/media/restaurant.1a81e5204b222c9b33d0.png",
+    "static/media/gpt.png": "/reactportfolio/static/media/gpt.bb8487ed460dc4c7dff1.png",
+    "static/media/bestcleaning.png": "/reactportfolio/static/media/bestcleaning.f2124f32fb2cb5fe7e98.png",
+    "static/media/capstone.png": "/reactportfolio/static/media/capstone.acb9ad233c33de6b4ad7.png",
+    "static/media/oil.png": "/reactportfolio/static/media/oil.32a32351619652ac2ae7.png",
+    "static/media/Bootstrap.png": "/reactportfolio/static/media/Bootstrap.f51eaa41439f58e04f26.png",
+    "static/media/me.png": "/reactportfolio/static/media/me.7e222e819feaabb57b07.png",
+    "static/media/Anthony Bernard Cereno.png": "/reactportfolio/static/media/Anthony Bernard Cereno.bc1f8e650a1f9eb818ff.png",
+    "static/media/shopee.jpg": "/reactportfolio/static/media/shopee.c4730718b62f5d4b78fe.jpg",
+    "static/media/php.png": "/reactportfolio/static/media/php.144ab506ddba211b3555.png",
+    "static/media/freelance1.png": "/reactportfolio/static/media/freelance1.78d009c5f79769c5227b.png",
+    "static/media/nodejs.png": "/reactportfolio/static/media/nodejs.abfaef34ea49d0c7cd3c.png",
+    "static/media/Anthony.pdf": "/reactportfolio/static/media/Anthony.9afbbc43d5f4175b8eca.pdf",
+    "static/media/React.png": "/reactportfolio/static/media/React.2be95ec3d20466d7532b.png",
+    "static/media/express.png": "/reactportfolio/static/media/express.fe1eec364f69de4ba3f1.png",
+    "static/media/html5.png": "/reactportfolio/static/media/html5.985928a23182f6903d68.png",
+    "static/media/pizza hut.jpg": "/reactportfolio/static/media/pizza hut.4808ab8272a6f9c71920.jpg",
+    "static/media/css3.jpg": "/reactportfolio/static/media/css3.6263b355b587c01273e6.jpg",
+    "static/media/laravel.png": "/reactportfolio/static/media/laravel.c9caeace6751a09cb795.png",
+    "index.html": "/reactportfolio/index.html",
+    "main.71468831.css.map": "/reactportfolio/static/css/main.71468831.css.map",
+    "main.acce0141.js.map": "/reactportfolio/static/js/main.acce0141.js.map",
+    "453.bb177003.chunk.js.map": "/reactportfolio/static/js/453.bb177003.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71468831.css",
+    "static/js/main.acce0141.js"
+  ]
+}
