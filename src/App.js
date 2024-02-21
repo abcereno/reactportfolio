@@ -1,7 +1,8 @@
 import React from "react";
 import Home from "./Links/Home/Home";
 import About from "./Links/About/About";
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
 import Navibar from "./Common/Navibar/Navibar";
 import Footer from "./Common/Footer/Footer";
@@ -9,7 +10,7 @@ import NotFound from "./Links/NotFound/NotFound";
 import Affiliate from "./Links/Affiliates/Affiliate";
 function App() {
   return (
-      <Router>
+      <BrowserRouter>
       <Navibar/>
       <Container>
           <Routes>
@@ -20,7 +21,7 @@ function App() {
           </Routes>
       </Container>
       <Footer/>
-      </Router>
+      </BrowserRouter>
   );
 }
 
