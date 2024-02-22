@@ -50,7 +50,7 @@ const about = [
         description3: "Wrote clean and manageable codes",
         description4: "A Multi-page Responsive Website using ReactJS",
         link: "https://abcereno.github.io/restaurant/",
-        note: "React Native",
+        note: "ReactJS",
         pic: pic4,
     },
     {
@@ -62,7 +62,7 @@ const about = [
         description3: "Wrote clean and manageable codes",
         description4: "A Multi-page Responsive Website using ReactJS",
         link: "https://abcereno.github.io/gpt/",
-        note: "*React Native",
+        note: "*ReactJS",
         pic: pic5,
     },
 ]
