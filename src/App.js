@@ -11,7 +11,7 @@ import Affiliate from "./Links/Affiliates/Affiliate";
 function App() {
   return (
     // basename="/reactportfolio"
-      <BrowserRouter >
+      <BrowserRouter basename="/reactportfolio">
       <Navibar/>
       <Container>
           <Routes>
