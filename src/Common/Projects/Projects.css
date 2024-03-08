@@ -3,6 +3,14 @@
 	        animation: slide-in-bck-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
           animation-delay: calc(var(--delay) + 0.2s);
         }
+.gallery{
+  border: 1px solid black;
+  border-radius: 32px;
+  margin: 0;
+}
+.gallery-child{
+  border-radius: 32px;
+}
 
 @-webkit-keyframes project-slide-in-bck-bottom {
     0% {

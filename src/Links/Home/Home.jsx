@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Row, Col, Modal, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import "./Home.css"
 import Projects from '../../Common/Projects/Projects'
 import Karosel from '../../Common/Karosel/Karosel'
 import me from "../../Images/me.png";
-import resume from "../../Images/Anthony Bernard Cereno.png";
+import ModalComponent from "../../Common/ModalComponent/ModalComponent";
 import file from "./Anthony.pdf";
 import Spline from '@splinetool/react-spline';
 const Home = () => {
@@ -15,12 +15,12 @@ const Home = () => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <Row style={{ minHeight: "calc(100vh - 96px)" }} className="text-light bg-dark full-bleed">
+      <Row style={{ minHeight: "calc(100vh - 96px)" }} className="text-light bg-dark full-bleed justify-content-center p-2">
         <Row>
           <Col xs={12} md={6}>
             <Row className='d-flex justify-content-center'>
               <Col xs={12} md={6}>
-                <div style={{ "--delay": "0.2s" }} className='hero slide-in-bck-bottom'>
+                <div className='hero slide-in-bck-bottom'>
                   <img
                     className='hero-img'
                     width={171}
@@ -31,17 +31,17 @@ const Home = () => {
                 </div>
               </Col>
               <Col xs={12} md={6}>
-                <Spline style={{ height: "315px" }} scene="https://prod.spline.design/7hQVzQV-tjbJ4NMR/scene.splinecode" />
+                <Spline style={{ height: "315px" }} scene="https://prod.spline.design/7hQVzQV-tjbJ4NMR/scene.splinecode" loading="lazy"/>
               </Col>
             </Row>
           <Row className='d-flex flex-column'>
             <h1 className='flicker-2 tracking-in-expand'>Anthony Bernard Cereno</h1>
-            <h6 style={{ "--delay": "0.4s" }} className='tracking-in-expand slide-in-bck-bottom'>Fullstack Web Developer</h6>
+            <h6 className='tracking-in-expand slide-in-bck-bottom'>Fullstack Web Developer</h6>
             <div class="d-flex justify-content-evenly w-100">
-              <button style={{ "--delay": "0.6s" }} type="button" class="btn btn-primary d-inline-block slide-in-bck-bottom">
+              <button type="button" class="btn btn-primary d-inline-block slide-in-bck-bottom">
                 <a className='text-light text-unstyled' href={file} download>Download CV</a>
               </button>
-              <Button style={{ "--delay": "0.8s" }} className='slide-in-bck-bottom' variant="primary" onClick={handleShow}>
+              <Button className='slide-in-bck-bottom' variant="info" onClick={handleShow}>
                 View Only CV
               </Button>
             </div>
@@ -51,24 +51,12 @@ const Home = () => {
           <Karosel />
         </Col>
         </Row>
-        <Row>
+        <Row className='p-0'>
           <Projects />
         </Row>
       </Row>
+      <ModalComponent show={show} handleClose={handleClose} />
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Anthony Bernard Cereno CV</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <img className='img-fluid' src={resume} alt="Anthony Bernard Cereno" />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
     </>
   )
 }

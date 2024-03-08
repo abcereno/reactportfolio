@@ -29,7 +29,7 @@ const About = () => {
                   </div>
                 </div>
         ))}
-                <h1 className='d-flex justify-content-center align-items-center mt-3'>Projects</h1>
+                <h1 className='d-flex justify-content-center align-items-center mt-3 position-sticky'>Projects</h1>
         {about.map((non) => (
                   <div border="light" key={non.id} class="mt-5 row g-0 bg-body-secondary position-sticky hidden">
                   <div class="col-md-6 mb-md-0 p-md-4 bg-dark text-light">

@@ -7,7 +7,7 @@ const Projects = () => {
             <ul class="list-unstyled gallery">
                 {data.map((list) => (
                     <li key={list.id}>
-                        <figure  style={{ "--delay": `${list.id}s` }} className='project-slide-in-bck-bottom'>
+                        <figure style={{ "--delay": `${list.id}s` }} className='project-slide-in-bck-bottom gallery-child'>
                             <a href={list.link}><img src={list.path} alt={list.name}/></a>
                             <figcaption>
                                 <main>
