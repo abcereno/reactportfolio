@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactportfolio/static/css/main.71468831.css",
-    "main.js": "/reactportfolio/static/js/main.59ab4b96.js",
+    "main.css": "/reactportfolio/static/css/main.ffdca844.css",
+    "main.js": "/reactportfolio/static/js/main.90d69c2b.js",
     "static/js/208.5a1bcece.chunk.js": "/reactportfolio/static/js/208.5a1bcece.chunk.js",
     "static/js/293.2bb250e7.chunk.js": "/reactportfolio/static/js/293.2bb250e7.chunk.js",
     "static/js/917.e729b571.chunk.js": "/reactportfolio/static/js/917.e729b571.chunk.js",
@@ -31,8 +31,8 @@
     "static/media/css3.jpg": "/reactportfolio/static/media/css3.6263b355b587c01273e6.jpg",
     "static/media/laravel.png": "/reactportfolio/static/media/laravel.c9caeace6751a09cb795.png",
     "index.html": "/reactportfolio/index.html",
-    "main.71468831.css.map": "/reactportfolio/static/css/main.71468831.css.map",
-    "main.59ab4b96.js.map": "/reactportfolio/static/js/main.59ab4b96.js.map",
+    "main.ffdca844.css.map": "/reactportfolio/static/css/main.ffdca844.css.map",
+    "main.90d69c2b.js.map": "/reactportfolio/static/js/main.90d69c2b.js.map",
     "208.5a1bcece.chunk.js.map": "/reactportfolio/static/js/208.5a1bcece.chunk.js.map",
     "293.2bb250e7.chunk.js.map": "/reactportfolio/static/js/293.2bb250e7.chunk.js.map",
     "917.e729b571.chunk.js.map": "/reactportfolio/static/js/917.e729b571.chunk.js.map",
@@ -42,7 +42,7 @@
     "453.bb177003.chunk.js.map": "/reactportfolio/static/js/453.bb177003.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71468831.css",
-    "static/js/main.59ab4b96.js"
+    "static/css/main.ffdca844.css",
+    "static/js/main.90d69c2b.js"
   ]
 }
