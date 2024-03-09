@@ -4,9 +4,6 @@
     max-width: 340px;
     border-radius: 64px;
 }
-.figure img{
-  border: 1px solid black;
-}
 .karosel-slide-in-bck-bottom {
 	-webkit-animation: slide-in-bck-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-bck-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
