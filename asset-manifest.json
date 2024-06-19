@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactportfolio/static/css/main.b21cdb71.css",
-    "main.js": "/reactportfolio/static/js/main.be07ee6b.js",
+    "main.css": "/reactportfolio/static/css/main.3c9307fb.css",
+    "main.js": "/reactportfolio/static/js/main.1d57a831.js",
     "static/js/208.5a1bcece.chunk.js": "/reactportfolio/static/js/208.5a1bcece.chunk.js",
     "static/js/293.2bb250e7.chunk.js": "/reactportfolio/static/js/293.2bb250e7.chunk.js",
     "static/js/917.e729b571.chunk.js": "/reactportfolio/static/js/917.e729b571.chunk.js",
@@ -30,8 +30,8 @@
     "static/media/pizza hut.jpg": "/reactportfolio/static/media/pizza hut.4808ab8272a6f9c71920.jpg",
     "static/media/beekman.png": "/reactportfolio/static/media/beekman.bd594e2da6b92a6468c9.png",
     "index.html": "/reactportfolio/index.html",
-    "main.b21cdb71.css.map": "/reactportfolio/static/css/main.b21cdb71.css.map",
-    "main.be07ee6b.js.map": "/reactportfolio/static/js/main.be07ee6b.js.map",
+    "main.3c9307fb.css.map": "/reactportfolio/static/css/main.3c9307fb.css.map",
+    "main.1d57a831.js.map": "/reactportfolio/static/js/main.1d57a831.js.map",
     "208.5a1bcece.chunk.js.map": "/reactportfolio/static/js/208.5a1bcece.chunk.js.map",
     "293.2bb250e7.chunk.js.map": "/reactportfolio/static/js/293.2bb250e7.chunk.js.map",
     "917.e729b571.chunk.js.map": "/reactportfolio/static/js/917.e729b571.chunk.js.map",
@@ -43,7 +43,7 @@
     "453.bb177003.chunk.js.map": "/reactportfolio/static/js/453.bb177003.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b21cdb71.css",
-    "static/js/main.be07ee6b.js"
+    "static/css/main.3c9307fb.css",
+    "static/js/main.1d57a831.js"
   ]
 }
