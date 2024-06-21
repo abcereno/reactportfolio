@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/reactportfolio/static/css/main.d3bc64fd.css",
-    "main.js": "/reactportfolio/static/js/main.4de19274.js",
+    "main.js": "/reactportfolio/static/js/main.72c48e8f.js",
     "static/js/208.5a1bcece.chunk.js": "/reactportfolio/static/js/208.5a1bcece.chunk.js",
     "static/js/293.2bb250e7.chunk.js": "/reactportfolio/static/js/293.2bb250e7.chunk.js",
     "static/js/917.e729b571.chunk.js": "/reactportfolio/static/js/917.e729b571.chunk.js",
@@ -17,11 +17,11 @@
     "static/media/gpt.png": "/reactportfolio/static/media/gpt.bb8487ed460dc4c7dff1.png",
     "static/media/bestcleaning.png": "/reactportfolio/static/media/bestcleaning.f2124f32fb2cb5fe7e98.png",
     "static/media/kodego.png": "/reactportfolio/static/media/kodego.9d915517683a4cd9ebac.png",
+    "static/media/id.png": "/reactportfolio/static/media/id.fb30672c0c361af6ab62.png",
     "static/media/ltos.png": "/reactportfolio/static/media/ltos.83af4c8d5d51697e0d9d.png",
     "static/media/NATexam.jpg": "/reactportfolio/static/media/NATexam.8c0f36abb47f09577e71.jpg",
     "static/media/capstone.png": "/reactportfolio/static/media/capstone.acb9ad233c33de6b4ad7.png",
     "static/media/Anthony Bernard Cereno.png": "/reactportfolio/static/media/Anthony Bernard Cereno.1529b24f20f662d49a77.png",
-    "static/media/me.png": "/reactportfolio/static/media/me.7e222e819feaabb57b07.png",
     "static/media/grp.png": "/reactportfolio/static/media/grp.188580669e986d5ae856.png",
     "static/media/shopee.jpg": "/reactportfolio/static/media/shopee.c4730718b62f5d4b78fe.jpg",
     "static/media/freelance1.png": "/reactportfolio/static/media/freelance1.78d009c5f79769c5227b.png",
@@ -30,7 +30,7 @@
     "static/media/beekman.png": "/reactportfolio/static/media/beekman.bd594e2da6b92a6468c9.png",
     "index.html": "/reactportfolio/index.html",
     "main.d3bc64fd.css.map": "/reactportfolio/static/css/main.d3bc64fd.css.map",
-    "main.4de19274.js.map": "/reactportfolio/static/js/main.4de19274.js.map",
+    "main.72c48e8f.js.map": "/reactportfolio/static/js/main.72c48e8f.js.map",
     "208.5a1bcece.chunk.js.map": "/reactportfolio/static/js/208.5a1bcece.chunk.js.map",
     "293.2bb250e7.chunk.js.map": "/reactportfolio/static/js/293.2bb250e7.chunk.js.map",
     "917.e729b571.chunk.js.map": "/reactportfolio/static/js/917.e729b571.chunk.js.map",
@@ -43,6 +43,6 @@
   },
   "entrypoints": [
     "static/css/main.d3bc64fd.css",
-    "static/js/main.4de19274.js"
+    "static/js/main.72c48e8f.js"
   ]
 }
