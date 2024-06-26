@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/reactportfolio/static/css/main.d22690a7.css",
-    "main.js": "/reactportfolio/static/js/main.e2fa0cc6.js",
+    "main.css": "/reactportfolio/static/css/main.2d37c2e4.css",
+    "main.js": "/reactportfolio/static/js/main.0ab60917.js",
     "static/css/764.c2093b0f.chunk.css": "/reactportfolio/static/css/764.c2093b0f.chunk.css",
     "static/js/764.f5e75347.chunk.js": "/reactportfolio/static/js/764.f5e75347.chunk.js",
     "static/css/19.f3dceba9.chunk.css": "/reactportfolio/static/css/19.f3dceba9.chunk.css",
-    "static/js/19.dbaf03a5.chunk.js": "/reactportfolio/static/js/19.dbaf03a5.chunk.js",
+    "static/js/19.fdaf5f98.chunk.js": "/reactportfolio/static/js/19.fdaf5f98.chunk.js",
     "static/js/591.87e0cec2.chunk.js": "/reactportfolio/static/js/591.87e0cec2.chunk.js",
     "static/css/734.31d6cfe0.chunk.css": "/reactportfolio/static/css/734.31d6cfe0.chunk.css",
     "static/js/734.c09b4566.chunk.js": "/reactportfolio/static/js/734.c09b4566.chunk.js",
@@ -43,12 +43,12 @@
     "static/media/pizza hut.jpg": "/reactportfolio/static/media/pizza hut.4808ab8272a6f9c71920.jpg",
     "static/media/beekman.png": "/reactportfolio/static/media/beekman.bd594e2da6b92a6468c9.png",
     "index.html": "/reactportfolio/index.html",
-    "main.d22690a7.css.map": "/reactportfolio/static/css/main.d22690a7.css.map",
-    "main.e2fa0cc6.js.map": "/reactportfolio/static/js/main.e2fa0cc6.js.map",
+    "main.2d37c2e4.css.map": "/reactportfolio/static/css/main.2d37c2e4.css.map",
+    "main.0ab60917.js.map": "/reactportfolio/static/js/main.0ab60917.js.map",
     "764.c2093b0f.chunk.css.map": "/reactportfolio/static/css/764.c2093b0f.chunk.css.map",
     "764.f5e75347.chunk.js.map": "/reactportfolio/static/js/764.f5e75347.chunk.js.map",
     "19.f3dceba9.chunk.css.map": "/reactportfolio/static/css/19.f3dceba9.chunk.css.map",
-    "19.dbaf03a5.chunk.js.map": "/reactportfolio/static/js/19.dbaf03a5.chunk.js.map",
+    "19.fdaf5f98.chunk.js.map": "/reactportfolio/static/js/19.fdaf5f98.chunk.js.map",
     "591.87e0cec2.chunk.js.map": "/reactportfolio/static/js/591.87e0cec2.chunk.js.map",
     "734.c09b4566.chunk.js.map": "/reactportfolio/static/js/734.c09b4566.chunk.js.map",
     "890.bfba8bbb.chunk.js.map": "/reactportfolio/static/js/890.bfba8bbb.chunk.js.map",
@@ -68,7 +68,7 @@
     "688.c571ff97.chunk.js.map": "/reactportfolio/static/js/688.c571ff97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d22690a7.css",
-    "static/js/main.e2fa0cc6.js"
+    "static/css/main.2d37c2e4.css",
+    "static/js/main.0ab60917.js"
   ]
 }
