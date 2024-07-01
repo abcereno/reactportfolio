@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/reactportfolio/static/css/main.7d5a365f.css",
-    "main.js": "/reactportfolio/static/js/main.a5eb5e3f.js",
+    "main.js": "/reactportfolio/static/js/main.9a7ad89c.js",
     "static/css/764.c2093b0f.chunk.css": "/reactportfolio/static/css/764.c2093b0f.chunk.css",
-    "static/js/764.5020e4cc.chunk.js": "/reactportfolio/static/js/764.5020e4cc.chunk.js",
+    "static/js/764.340b7323.chunk.js": "/reactportfolio/static/js/764.340b7323.chunk.js",
     "static/css/19.f3dceba9.chunk.css": "/reactportfolio/static/css/19.f3dceba9.chunk.css",
     "static/js/19.e98e86c2.chunk.js": "/reactportfolio/static/js/19.e98e86c2.chunk.js",
     "static/js/591.87e0cec2.chunk.js": "/reactportfolio/static/js/591.87e0cec2.chunk.js",
@@ -35,18 +35,18 @@
     "static/media/ltos.png": "/reactportfolio/static/media/ltos.83af4c8d5d51697e0d9d.png",
     "static/media/NATexam.jpg": "/reactportfolio/static/media/NATexam.8c0f36abb47f09577e71.jpg",
     "static/media/capstone.png": "/reactportfolio/static/media/capstone.acb9ad233c33de6b4ad7.png",
-    "static/media/Anthony Bernard Cereno.png": "/reactportfolio/static/media/Anthony Bernard Cereno.1529b24f20f662d49a77.png",
+    "static/media/Anthony Bernard Cereno.png": "/reactportfolio/static/media/Anthony Bernard Cereno.36d0b3a78496599df80d.png",
     "static/media/grp.png": "/reactportfolio/static/media/grp.188580669e986d5ae856.png",
     "static/media/shopee.jpg": "/reactportfolio/static/media/shopee.c4730718b62f5d4b78fe.jpg",
     "static/media/freelance1.png": "/reactportfolio/static/media/freelance1.78d009c5f79769c5227b.png",
-    "static/media/Anthony Bernard Cereno.pdf": "/reactportfolio/static/media/Anthony Bernard Cereno.db0cda17988825f79737.pdf",
+    "static/media/Anthony Bernard Cereno.pdf": "/reactportfolio/static/media/Anthony Bernard Cereno.1ce39be1587cd8c7bed4.pdf",
     "static/media/pizza hut.jpg": "/reactportfolio/static/media/pizza hut.4808ab8272a6f9c71920.jpg",
     "static/media/beekman.png": "/reactportfolio/static/media/beekman.bd594e2da6b92a6468c9.png",
     "index.html": "/reactportfolio/index.html",
     "main.7d5a365f.css.map": "/reactportfolio/static/css/main.7d5a365f.css.map",
-    "main.a5eb5e3f.js.map": "/reactportfolio/static/js/main.a5eb5e3f.js.map",
+    "main.9a7ad89c.js.map": "/reactportfolio/static/js/main.9a7ad89c.js.map",
     "764.c2093b0f.chunk.css.map": "/reactportfolio/static/css/764.c2093b0f.chunk.css.map",
-    "764.5020e4cc.chunk.js.map": "/reactportfolio/static/js/764.5020e4cc.chunk.js.map",
+    "764.340b7323.chunk.js.map": "/reactportfolio/static/js/764.340b7323.chunk.js.map",
     "19.f3dceba9.chunk.css.map": "/reactportfolio/static/css/19.f3dceba9.chunk.css.map",
     "19.e98e86c2.chunk.js.map": "/reactportfolio/static/js/19.e98e86c2.chunk.js.map",
     "591.87e0cec2.chunk.js.map": "/reactportfolio/static/js/591.87e0cec2.chunk.js.map",
@@ -69,6 +69,6 @@
   },
   "entrypoints": [
     "static/css/main.7d5a365f.css",
-    "static/js/main.a5eb5e3f.js"
+    "static/js/main.9a7ad89c.js"
   ]
 }
