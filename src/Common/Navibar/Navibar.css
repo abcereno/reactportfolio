@@ -2,8 +2,11 @@
 
 
 .navibar{
+    position: relative !important;
     font-family: "Protest Strike", sans-serif;
     font-weight: 500;
+    background: transparent;
+    z-index: 10 !important;
 }
 .navbar-toggler{
     background: white !important;

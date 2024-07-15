@@ -1,63 +1,98 @@
-import React, { useState } from 'react'
-import { Row, Col, Button } from 'react-bootstrap';
-import "./Home.css"
-import me from "../../Assets/Images/me.png";
-import ModalComponent from "../../Common/ModalComponent/ModalComponent";
-import file from "../../Assets/Anthony Bernard Cereno.pdf";
-import Spline from '@splinetool/react-spline';
-import Spinner from 'react-bootstrap/Spinner';
+import React, { useEffect, useState } from "react";
+import { Row, Col } from "react-bootstrap";
+import "./Home.css";
+import { Link } from "react-router-dom";
+import Spline from "@splinetool/react-spline";
+import MyLoader from "../../Common/MyLoader/MyLoader";
+import fb from "../../Assets/Images/fb.png";
+import fiverr from "../../Assets/Images/fiverr.png";
+import onlinejobs from "../../Assets/Images/onlinejob.png";
+import next from "../../Assets/Images/next.png";
+
 const Home = () => {
-  const [splineLoaded, setSplineLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const jobs = [
+    "FullStack Web Developer",
+    "Amazon VA",
+    "Google Ads Manager",
+    "Data Entry",
+    "Store Manager",
+    "GoHighLevel",
+    "Ninja Automations",
+  ];
+  const [role, setRole] = useState("");
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      setRole(jobs[index]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      index = (index + 1) % jobs.length;
+    }, 2000);
 
-  // Function to be called when spline is loaded
-  const handleSplineLoad = () => {
-    setSplineLoaded(true);
-  };
-
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
-    <Row className="row-content text-light bg-dark full-bleed justify-content-center p-2">
-      <Col xs={12} md={11}>
-        <div style={{ "--delay": "0.1s" }} className='centered scale-in-center h-auto'>
-          <img
-            className='hero-img'
-            width={171}
-            height={180}
-            alt="Web Developer"
-            src={me}
-          />
-        </div>
-        <h1 style={{ "--delay": "0.2s" }} className='scale-in-center centered'>Anthony Bernard Cereno</h1>
-        <h3 style={{ "--delay": "0.3s" }} className='scale-in-center centered'>Fullstack Web Developer</h3>
-        <div className="d-flex justify-content-center gap-3 w-100">
-          <button style={{ "--delay": "0.4s" }} className='scale-in-center btn btn-primary d-inline-block' type="button">
-            <a className='text-light text-unstyled' href={file} download>Download CV</a>
-          </button>
-          <Button style={{ "--delay": "0.5s" }} className='scale-in-center' variant="info" onClick={handleShow}>
-            View Only CV
-          </Button>
-        </div>
-        <div style={{ "--delay": "0.8s" }} className='scale-in-center'>
-          {!splineLoaded && (
-            <div className='flex-column justify-content-center align-items-center'>
-              <h6>Loading...</h6>
-              <Spinner animation="border" variant="secondary" />
-            </div>
-          )}
-          <Spline
-            style={{ height: "330px" }}
-            scene="https://prod.spline.design/7hQVzQV-tjbJ4NMR/scene.splinecode"
-            loading="lazy"
-            onLoad={handleSplineLoad} // Call handleSplineLoad when spline is loaded
-          />
-        </div>
-        <ModalComponent show={show} handleClose={handleClose} />
-      </Col>
-    </Row>
-  )
-}
+    <>
+      <Row className="row-content">
+        <Col
+          xs={12}
+          md={6}
+          className="d-flex flex-column align-items-center justify-content-center"
+        >
+          <div className="spline">
+            {isLoading && <MyLoader />}
+            <Spline
+              scene="https://prod.spline.design/7hQVzQV-tjbJ4NMR/scene.splinecode"
+              onLoad={() => setIsLoading(false)}
+            />
+          </div>
+        </Col>
+        <Col
+          xs={12}
+          md={6}
+          className="d-flex flex-column align-items-center justify-content-center"
+        >
+          <h2>Hi! I am</h2>
+          <h1 className="name ant">AnthonY</h1>
+          <h3 className="role">{role}</h3>
+          <div className="centered gap-2">
+            <a
+              className="btn btn-primary"
+              href="https://www.fiverr.com/anthonybernardc"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img className="img-links" src={fiverr} alt="www.fiverr.com" />
+            </a>
+            <a
+              className="btn btn-primary"
+              href="https://www.onlinejobs.ph/jobseekers/info/2598500"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="img-links"
+                src={onlinejobs}
+                alt="www.onlinejob.ph"
+              />
+            </a>
+            <a
+              className="btn btn-primary"
+              href="https://www.facebook.com/abcereno/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img className="img-links" src={fb} alt="www.facebook.com" />
+            </a>
+            <Link className="btn btn-primary nextpage" to={"/credits"}>
+              <img className="img-links" src={next} alt="Next Page" />
+            </Link>
+          </div>
+        </Col>
+      </Row>
+    </>
+  );
+};
 
-export default Home
+export default Home;

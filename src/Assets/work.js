@@ -29,14 +29,14 @@ const work = [
     },
     {
         id: 3,
-        title: "Amazon VA - Beekman and Kruger",
+        title: "Amazon VA - Beekman and Cruger",
         duration: "April 2024 - june 2024",
         description1: "Product Research",
         description2: "Data-Entry",
         description3: "Attention to detail",
         description4: "Basically my taks is to enter product informations into an airtable from the wholesaler's website provided by the client",
         link: "",
-        note: "I am a trained Amazon VA.",
+        note: "Amazon VA",
         pic: pic3,
     },
 ]
