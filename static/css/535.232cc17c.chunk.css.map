@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/535.232cc17c.chunk.css","mappings":"AAAA,uBAEI,gBAAiB,CADjB,eAIJ","sources":["Links/ViewProduct/ViewProduct.css"],"sourcesContent":[".product-img-container{\r\n    max-width: 18rem;\r\n    max-height: 18rem;\r\n    /* position: sticky;\r\n    top: 5rem; */\r\n}"],"names":[],"sourceRoot":""}
