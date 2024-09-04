@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/72.b0aed916.chunk.css","mappings":"AAAA,QACE,cACF,CACA,SAEE,kBAAmB,CADnB,gBAEF","sources":["Links/Home/Home.css"],"sourcesContent":[".home p {\r\n  font-size: 24px;\r\n}\r\n#profile{\r\n  max-height: 300px;\r\n  border-radius: 32px;\r\n}\r\n\r\n"],"names":[],"sourceRoot":""}
