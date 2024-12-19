@@ -1,43 +1,33 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./Navibar.css";
 import { Link } from "react-router-dom";
 import ModalComponent from "../../Common/ModalComponent/ModalComponent";
-import file from "../../Assets/Anthony Bernard Cereno.pdf";
-import AutoNavigateContext from '../Contexts/Contexts';
+import { useEcommerceContext } from "../EcommerceContext/EcommerceContext";
 
 const Navibar = () => {
+  const { cart } = useEcommerceContext();
   const [show, setShow] = useState(false);
-  const { isAutoNavigate, toggleAutoNavigate } = useContext(AutoNavigateContext);
-
   const handleClose = () => setShow(false);
   const [showModal, setShowModal] = useState(false);
-
   const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
-
-
-
   const handleToggle = () => {
-    setShow(prevShow => !prevShow);
+    setShow((prevShow) => !prevShow);
   };
 
-
   return (
-    <div className="navibar text-light ">
+    <div className="navibar text-light">
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="p-2 position-fixed w-100 bg-dark"
+        className="p-2 position-fixed bg-dark w-100"
       >
         <Container>
-          <Navbar.Brand className="text-light">A..B..C..</Navbar.Brand>
           <Navbar.Toggle
             onClick={handleToggle}
             aria-controls="responsive-navbar-nav"
           />
-          <Navbar.Collapse in={show} id="responsive-navbar-nav">
-            <Nav>
               <Link
                 onClick={handleClose}
                 className="me-3 text-decoration-none text-light"
@@ -48,27 +38,33 @@ const Navibar = () => {
               <Link
                 onClick={handleClose}
                 className="me-3 text-decoration-none text-light"
-                to={"/about"}
+                target="_blank"
+                to={"https://calendly.com/cereno-abc/30min"}
               >
-                Work
+                Let's Talk
               </Link>
-              <a
-                className="me-3 text-decoration-none text-light"
-                href={file}
-                download
-              >
-                Download CV
-              </a>
+          <Navbar.Collapse in={show} id="responsive-navbar-nav">
+            <Nav>
               <Link
                 onClick={handleShowModal}
                 className="me-3 text-decoration-none text-light"
               >
-                View CV
+                Resume
               </Link>
-              <Link className="me-3 text-decoration-none text-light bg-primary p-1" onClick={toggleAutoNavigate}>
-                {isAutoNavigate
-                  ? `Turn Off Advertisement`
-                  : "Turn On Advertisement"}
+            </Nav>
+            <Nav>
+            <Link
+                onClick={handleClose}
+                className="me-3 text-decoration-none text-light"
+                to={"/about"}
+              >
+                About
+              </Link>
+            </Nav>
+            <Nav>
+              <Link onClick={handleClose}
+                to="/cart" className="btn btn-primary position-relative">
+                Cart <span className="badge text-bg-secondary">{cart.length}</span>
               </Link>
             </Nav>
           </Navbar.Collapse>

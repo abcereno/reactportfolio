@@ -1,24 +1,46 @@
-.hidden{
-  opacity: 0;
-  scale: 0.8;
-  animation-timeline: view();
-  animation-range: 250px;
-  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+#profilePic {
+  max-height: 300px;
 }
-.work-content{
-  padding-top: 56px;
+.fs-48 {
+  font-size: 48px;
 }
-
-@keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+.fs-24 {
+  font-size: 24px;
+}
+.gap-64 {
+  gap: 64px;
+}
+.grid-about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+.grid-item{
+    border: 1px solid rgba(218, 197, 167, .15);
+    padding: 16px;
+}
+.about-second h3{
+    font-size: 48px;
+    line-height: 130%;
+}
+.about-second p{
+    font-size: 16px;
+}
+.social a::after{
+    content: "→";
+}
+@media (max-width: 767px)   {
+  .spline {
+    width: 50% !important;
+    padding-top: 63.33% !important; /* 4/3 of the width to maintain a 3:4 ratio */
   }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    scale: 1;
-
+  .gap-5{
+    gap: 0.5rem !important;
+  }
+  .row-loader{
+    max-height: fit-content !important;
+  }
+  .spline-container{
+    max-height: fit-content !important;
   }
 }

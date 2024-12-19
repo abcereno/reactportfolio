@@ -1,125 +1,99 @@
-import React from "react";
-import about from "../../Assets/about";
-import work from "../../Assets/experience";
-import nontech from "../../Assets/work";
-import { Col, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
 import "./About.css";
-// import { Link } from "react-router-dom";
+import Spline from "@splinetool/react-spline";
+import MyLoader from "../../Common/MyLoader/MyLoader";
+import { Col, Container, Row } from "react-bootstrap";
+import { id, kodego } from "../../Assets/Images/images";
+import { Link } from "react-router-dom";
+
 const About = () => {
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const hiddenElements = document.querySelectorAll(".hidden");
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add("animate");
-  //         } else {
-  //           entry.target.classList.remove("animate");
-  //         }
-  //       });
-  //     },
-  //     {
-  //       threshold: 0.5, // Adjust this value as needed
-  //     }
-  //   );
-
-  //   hiddenElements.forEach((element) => {
-  //     observer.observe(element);
-  //   });
-  // });
-
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
-    <Row style={{overflow: "auto"}} className="text-light d-flex flex-nowrap align-items-center row-content gap-5">
-      <Col sm={12} md={6} className="centered">
-        <h1 className="d-flex flex-nowrap">Non-Tech</h1>
-      </Col>
-      {nontech.map((non) => (
-        <Col sm={12} md={6} className="columned gap-5" border="light" key={non.id}>
-          <div className="col about-img">
-            <img src={non.pic} className="img-fluid" alt={non.title} />
+    <Container>
+      <Row className="row-content">
+        <Col sm={12} md={5} className="spline-container">
+          {isLoading ? (
+            <MyLoader />
+          ) : (
+            <div className="simple-list-example-scrollspy centered">
+              <div className={`spline centered ${isLoading ? "d-none" : ""}`}>
+                <Spline className="centered" scene="https://prod.spline.design/7hQVzQV-tjbJ4NMR/scene.splinecode" />
+              </div>
+            </div>
+          )}
+        </Col>
+        <Col sm={12} md={7} className="pt-5 about d-flex flex-column">
+          <div className="about-first d-flex flex-column gap-5">
+            <div>
+              <h2 className="centered job">AB</h2>
+              <h2 className="centered job">Cereno</h2>
+              <p className="fs-24">
+                I am passionate about helping businesses thrive in the digital age
+              </p>
+            </div>
+            <h6 className="text-light animate">More Info ↓</h6>
           </div>
-          <div className="col">
-            <h5>{non.title}</h5>
-            <h6>
-              <i>{non.description1}</i>
-            </h6>
+          <div className="`about-second` entering my-5">
+            <h3 className="py-sm-1 py-md-5">Your Partner in Bringing Your Web Design Vision to Life</h3>
             <p>
-              <ul>
-                <li>{non.description2}</li>
-                <li>{non.description3}</li>
-                <li>{non.description4}</li>
-              </ul>
+              As a freelance web designer and developer, I bring a unique
+              combination of creativity and technical expertise to every
+              project. With a keen eye for design and a passion for delivering
+              user-friendly web experiences, I work closely with clients to
+              understand their needs and bring their vision to life.
             </p>
-            <h6 className="text-danger">{non.note}</h6>
+            <p>
+              My approach is rooted in collaboration and communication, and I
+              take pride in my ability to explain technical concepts in simple
+              terms. Whether I'm developing a new website from scratch or
+              optimizing an existing site for search engines, I always strive
+              for excellence in both form and function. With a dedication to
+              quality and a commitment to staying on top of the latest trends
+              and technologies, I am confident in my ability to deliver
+              exceptional results that exceed my clients' expectations.
+            </p>
+            <div className="centered bg-dark">
+              <img
+                id="profilePic"
+                className="img-fluid filter"
+                src={id}
+                alt="Anthony Bernard Cereno"
+              />
+            </div>
+          </div>
+          <div className="about-third entering">
+            <div className="grid-about">
+              <div className="social grid-item">
+                <Link className="text-decoration-none d-flex justify-content-between" to={"https://www.facebook.com/abcereno"}>
+                <p className="m-0">Facebook</p>
+                </Link>
+              </div>
+              <div className="social grid-item">
+              <Link className="text-decoration-none d-flex justify-content-between" to={"https://www.onlinejobs.ph/jobseekers/info/2598500"}>
+                <p className="m-0">Onlinejobs</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="about-fourth entering my-5">
+            <div>
+              <h3>Bootcamp</h3>
+              <img
+                loading="lazy"
+                className="img-fluid"
+                src={kodego}
+                alt="KodeGo Fullstack Web Development Bootcamp"
+              />
+            </div>
           </div>
         </Col>
-      ))}
-      <Col sm={12} md={6} className="centered">
-        <h1 className="d-flex flex-nowrap">Projects</h1>
-      </Col>
-      {about.map((non) => (
-        <Col className="columned gap-5" sm={12} md={6} border="light" key={non.id}>
-          <div className="col about-img">
-            <img src={non.pic} className="img-fluid" alt={non.title} />
-          </div>
-          <div className="col">
-            <h5 className="mt-0">{non.title}</h5>
-            <h6>
-              <i>{non.description1}</i>
-            </h6>
-            <p>
-              <ul>
-                <li>{non.description2}</li>
-                <li>{non.description3}</li>
-                <li>{non.description4}</li>
-              </ul>
-            </p>
-            <h6>
-              <a href={non.link}>Visit Now!</a>
-            </h6>
-            <h6 className="text-danger">{non.note}</h6>
-          </div>
-        </Col>
-      ))}
-      {work.map((non) => (
-        <Col className="columned gap-5" sm={12} md={6} border="light" key={non.id}>
-          <div className="col about-img">
-            <img src={non.pic} className="img-fluid" alt={non.title} />
-          </div>
-          <div className="col">
-            <h5 className="mt-0">{non.title}</h5>
-            <h6>
-              <i>{non.description1}</i>
-            </h6>
-            <p>
-              <ul>
-                <li>{non.duration}</li>
-                <li>{non.description2}</li>
-                <li>{non.description3}</li>
-                <li>{non.description4}</li>
-                <li>{non.description5}</li>
-                <li>{non.description6}</li>
-                <li>{non.description7}</li>
-              </ul>
-            </p>
-            <h6>
-              <a href={non.link}>Visit Now!</a>
-            </h6>
-            <h6 className="text-danger">{non.note}</h6>
-          </div>
-        </Col>
-      ))}
-      {/* <button
-        style={{ "--delay": "0.4s" }}
-        className="scale-in-center btn btn-primary d-inline-block"
-        type="button"
-      >
-        <Link to={"/"} className="text-light text-unstyled">
-          Home
-        </Link>
-      </button> */}
-    </Row>
+      </Row>
+    </Container>
   );
 };
 

@@ -2,10 +2,10 @@ import React from "react";
 
 const MyLoader = () => {
   return (
-    <>
-      <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
-      <h6>Loading...</h6>
-    </>
+    <div className="row-loader centered">
+      <div className="spinner-border" role="status">
+  </div>
+    </div>
   );
 };
 

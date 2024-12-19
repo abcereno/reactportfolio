@@ -12,6 +12,268 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Anthony Bernard Cereno</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+*{
+  font-family: "Libre Baskerville", serif;
+  transition: all 0.5s cubic-bezier(0, 0.73, 0.27, 0.5);
+}
+:root::-webkit-scrollbar {
+  width: 1em !important;
+  height: 1em !important;
+}
+:root::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, rgba(0.047, 0.047, 0.047, 1) 0%, rgba(0.133, 0.157, 0.192, 1) 50%, rgba(0.192, 0.212, 0.247, 1) 100%) !important;
+
+}
+:root::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 4.7%, 0.5) !important;
+  border: 0.125em solid hsl(317.14, 13.6%, 22%, 1) !important;
+  border-radius: 100vw !important;
+}
+:root::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 4.7%)(0%, 0%, 0%, 0.5) !important;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+.centered, .loader-container, .item {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.row-content {
+  scroll-snap-align: start !important;
+  min-height: 100vh !important;
+  color: white;
+  padding-top: calc(56px + 1rem);
+}
+.columned{
+  display: flex;
+  flex-direction: column;
+}
+main {
+  background: #3f474f;
+}
+.row-loader{
+  min-height: calc(100vh - 56px);
+  max-height: fit-content !important;
+}
+.simple-list-example-scrollspy{
+  position: sticky;
+  top: calc(56px + 2rem);
+}
+.job {
+  font-size: clamp(5vw, 48px, 39px) !important;
+  font-weight: 800;
+}
+img:not(.resume,#profile,#profilePic){
+  aspect-ratio: 1;
+  object-fit: contain;
+  mix-blend-mode:multiply;
+}
+.box {
+  flex-basis: 400px !important;
+  /* border: 1px solid gray; */
+  color: white;
+  border-radius: 16px;
+  min-height: 300px;
+  padding: 3rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 4px 4px 10px #394047, inset -4px -4px 10px #434c55;
+
+}
+input,select{
+  box-shadow: inset 4px 4px 10px #394047, inset -4px -4px 10px #434c55;
+  background: transparent !important;
+  border-color: #3f474f !important;
+}
+.box:hover,input:hover {
+  box-shadow: inset 2px 2px 5px #394047, inset -2px -2px 5px #434c55, 2px 2px 5px #394047, -2px -2px 5px #434c55;
+}
+
+.box:focus,input:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #394047, inset -2px -2px 5px #434c55, 2px 2px 5px #394047, -2px -2px 5px #434c55;
+}
+a.butones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.butones {
+  background: #3f474f;
+  /* max-width: fit-content; */
+  padding: 10px 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #394047, -6px -6px 12px #434c55;
+  border: none;
+  transition: 400ms;
+}
+.butones:hover {
+  box-shadow: -5px -5px 15px #434c55, 5px 5px 15px #394047, inset 5px 5px 10px #394047,
+    inset -5px -5px 10px #434c55;
+  color: #d6d6d6;
+  transition: 400ms;
+}
+.entering {
+  opacity: 0;
+  transform: translate3d(0, -6rem, 0);
+  -webkit-animation: fadein 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fadein 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-timeline: view();
+}
+.animate{
+  -webkit-animation: updown 1s ease infinite alternate;
+  animation: updown 1s ease infinite alternate;
+}
+.filter{
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+  animation: shadow-animation 2s infinite;
+}
+/* loading page */
+.loader-container{
+  width: auto;
+  min-height: calc(100vh - 56px);
+  font-weight: 700;
+  background: black;
+  box-shadow: 0 0 0 100vmax black;
+}
+.loader-container svg text.text-body{
+  stroke: #6ba584;
+  animation: 4s infinite alternate write;
+}
+.loader-container svg text{
+  font-size: 3.5rem;
+  stroke-width: 2;
+}
+@-webkit-keyframes write{
+  0%{
+    -webkit-fill: transparent;
+    -webkit-stroke-width: 3;
+    -webkit-stroke-dashoffset: 25%;
+    -webkit-stroke-dasharray: 0 32%;
+      fill: transparent;
+      stroke-width: 3;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 32%;
+  }
+  50%{
+    -webkit-fill: rgba(7,25,82,1);
+    -webkit-stroke: rgba(8,131,149,1);
+    -webkit-stroke-width: 3;
+      fill: rgba(7,25,82,1);
+      stroke: rgba(8,131,149,1);
+      stroke-width: 3;
+  }
+  80%,
+  100%{
+    -webkit-fill: rgba(7,25,82,1);
+    -webkit-stroke-width: 0;
+    -webkit-stroke-dashoffset: -25%;
+    -webkit-stroke-dasharray: 32% 0;
+      fill: rgba(7,25,82,1);
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 32% 0;
+  }
+
+}
+@keyframes write{
+  0%{
+    -webkit-fill: transparent;
+    -webkit-stroke-width: 3;
+    -webkit-stroke-dashoffset: 25%;
+    -webkit-stroke-dasharray: 0 32%;
+      fill: transparent;
+      stroke-width: 3;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 32%;
+  }
+  50%{
+    -webkit-fill: rgba(7,25,82,1);
+    -webkit-stroke: rgba(8,131,149,1);
+    -webkit-stroke-width: 3;
+      fill: rgba(7,25,82,1);
+      stroke: rgba(8,131,149,1);
+      stroke-width: 3;
+  }
+  80%,
+  100%{
+    -webkit-fill: rgba(7,25,82,1);
+    -webkit-stroke-width: 0;
+    -webkit-stroke-dashoffset: -25%;
+    -webkit-stroke-dasharray: 32% 0;
+      fill: rgba(7,25,82,1);
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 32% 0;
+  }
+
+}
+@-webkit-keyframes updown {
+  0% {
+    -webkit-transform: translate3d(0, 3rem, 0);
+    transform: translate3d(0, 3rem, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes updown {
+  0% {
+    -webkit-transform: translate3d(0, 3rem, 0);
+    transform: translate3d(0, 3rem, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+h2:not(.accordion-header){
+  background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+  background-size: auto auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% auto;
+  color: #fff;
+  text-emphasis-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 140px;
+  animation: textclip 4s linear infinite;
+}
+@-webkit-keyframes textclip {
+  to {
+    -webkit-background-position: 200% center;
+      background-position: 200% center;
+  }
+}
+@keyframes textclip {
+  to {
+    -webkit-background-position: 200% center;
+      background-position: 200% center;
+  }
+}
+@-webkit-keyframes fadein {
+  30%,100% {
+    -webkit-opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadein {
+  30%,100% {
+    -webkit-opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

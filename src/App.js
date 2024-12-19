@@ -1,68 +1,71 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { Suspense, lazy, useEffect, useState, useContext } from 'react';
-import Navibar from "./Common/Navibar/Navibar";
-import { Container } from "react-bootstrap";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import React, { Suspense, lazy, useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import MyLoader from "./Common/MyLoader/MyLoader.jsx";
-import AutoNavigateContext from './Common/Contexts/Contexts.jsx';
-
+import AbcLoader from "./Common/AbcLoader/AbcLoader.jsx";
+import Navibar from "./Common/Navibar/Navibar.jsx";
+import Footer from "./Common/Footer/Footer.jsx";
+import ScrollTop from "./Links/ScrollTop/ScrollTop.jsx";
 
 const Home = lazy(() => import('./Links/Home/Home.jsx'));
 const About = lazy(() => import('./Links/About/About.jsx'));
 const NotFound = lazy(() => import('./Links/NotFound/NotFound.jsx'));
-const SecRow = lazy(() => import('./Links/SecRow/SecRow.jsx'));
-const ThirdRow = lazy(() => import('./Links/ThirdRow/ThirdRow.jsx'));
-const Section = lazy(() => import('./Links/Section/Section.jsx'));
-const Last = lazy(() => import('./Links/Last/Last.jsx'));
-const Credits = lazy(() => import('./Links/Credits/Credits.jsx'));
+const Products = lazy(() => import('./Links/Products/Products.jsx'));
+const Cart = lazy(() => import('./Links/Cart/Cart.jsx'));
+const ViewProduct = lazy(() => import('./Links/ViewProduct/ViewProduct.jsx'));
+const Ecommerce = lazy(() => import('./Links/Ecommerce/Ecommerce.jsx'));
+const Fullstack = lazy(() => import('./Links/Fullstack/Fullstack.jsx'));
+const Highlevel = lazy(() => import('./Links/Highlevel/Highlevel.jsx'));
+const Pamasko = lazy(() => import('./Links/Pamasko/Pamasko.jsx'));
+const FormAnya = lazy(() => import('./Links/FormAnya/FormAnya.jsx'));
+const FormSebastian = lazy(() => import('./Links/FormSebastian/FormSebastian.jsx'));
+const FormAmaya = lazy(() => import('./Links/FormAmaya/FormAmaya.jsx'));
 
 const App = () => {
-  const navigate = useNavigate();
-  // eslint-disable-next-line no-unused-vars
-  const [currentPage, setCurrentPage] = useState(0);
-  const { isAutoNavigate } = useContext(AutoNavigateContext);
-
-  const pages = ["/",'/secrow', '/thirdrow', "/section", "/last"];
+  const [showHome, setShowHome] = useState(false);
+  const location = useLocation(); // Get the current location
 
   useEffect(() => {
-    let interval;
-    if (isAutoNavigate) {
-      interval = setInterval(() => {
-        setCurrentPage(prevPage => {
-          const nextPage = (prevPage + 1) % pages.length;
-          navigate(pages[nextPage]);
-          return nextPage;
-        });
-      }, 6000); // Navigate every 10 seconds
-    }
+    const timer = setTimeout(() => {
+      setShowHome(true);
+    }, 4000);
 
-    return () => clearInterval(interval);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAutoNavigate, navigate]);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Check if the current path is NotFound route (usually /*)
+  const isNotFound = location.pathname === "/*";
 
   return (
     <main>
-      <Navibar />
-      <Container>
-        <Suspense fallback={<MyLoader />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/secrow" element={<SecRow />} />
-            <Route path="/thirdrow" element={<ThirdRow />} />
-            <Route path="/section" element={<Section />} />
-            <Route path="/last" element={<Last />} />
-            <Route path="/credits" element={<Credits />} />
-            <Route path="/*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </Container>
+      {showHome && <Navibar />}
+      <Suspense fallback={<MyLoader />}>
+        <Routes>
+          <Route path="/" element={showHome ? <Home /> : <AbcLoader />} />
+          <Route path="/*" element={<NotFound />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/ecommerce" element={<Ecommerce />} />
+          <Route path="/pamasko" element={<Pamasko />} />
+          <Route path="/fullstack" element={<Fullstack />} />
+          <Route path="/highlevel" element={<Highlevel />} />
+          <Route path="/product-catalog" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/view-product/:id" element={<ViewProduct />} />
+          <Route path="/anya" element={<FormAnya />} />
+          <Route path="/sebastian" element={<FormSebastian />} />
+          <Route path="/amaya" element={<FormAmaya />} />
+        </Routes>
+      </Suspense>
+      {!isNotFound && showHome && <Footer />} {/* Don't show Footer on NotFound */}
     </main>
   );
 };
 
 const AppWrapper = () => (
-  <BrowserRouter basename="/reactportfolio">
+  <BrowserRouter
+  //  basename="/reactportfolio"
+   >
+    <ScrollTop />
     <App />
   </BrowserRouter>
 );

@@ -1,97 +1,63 @@
-import React, { useEffect, useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import Spline from "@splinetool/react-spline";
-import MyLoader from "../../Common/MyLoader/MyLoader";
-import fb from "../../Assets/Images/fb.png";
-import fiverr from "../../Assets/Images/fiverr.png";
-import onlinejobs from "../../Assets/Images/onlinejob.png";
-import next from "../../Assets/Images/next.png";
-
+import { id } from "../../Assets/Images/images";
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const jobs = [
-    "FullStack Web Developer",
-    "Amazon VA",
-    "Google Ads Manager",
-    "Data Entry",
-    "Store Manager",
-    "GoHighLevel",
-    "Ninja Automations",
-  ];
-  const [role, setRole] = useState("");
-  useEffect(() => {
-    let index = 0;
-    const intervalId = setInterval(() => {
-      setRole(jobs[index]);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      index = (index + 1) % jobs.length;
-    }, 2000);
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   return (
-    <>
-      <Row className="row-content">
-        <Col
-          xs={12}
-          md={6}
-          className="d-flex flex-column align-items-center justify-content-center"
-        >
-          <div className="spline">
-            {isLoading && <MyLoader />}
-            <Spline
-              scene="https://prod.spline.design/7hQVzQV-tjbJ4NMR/scene.splinecode"
-              onLoad={() => setIsLoading(false)}
-            />
-          </div>
-        </Col>
-        <Col
-          xs={12}
-          md={6}
-          className="d-flex flex-column align-items-center justify-content-center"
-        >
-          <h2>Hi! I am</h2>
-          <h1 className="name ant">AnthonY</h1>
-          <h3 className="role">{role}</h3>
-          <div className="centered gap-2">
-            <a
-              className="btn btn-primary"
-              href="https://www.fiverr.com/anthonybernardc"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="img-links" src={fiverr} alt="www.fiverr.com" />
-            </a>
-            <a
-              className="btn btn-primary"
-              href="https://www.onlinejobs.ph/jobseekers/info/2598500"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="img-links"
-                src={onlinejobs}
-                alt="www.onlinejob.ph"
-              />
-            </a>
-            <a
-              className="btn btn-primary"
-              href="https://www.facebook.com/abcereno/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="img-links" src={fb} alt="www.facebook.com" />
-            </a>
-            <Link className="btn btn-primary nextpage" to={"/credits"}>
-              <img className="img-links" src={next} alt="Next Page" />
-            </Link>
-          </div>
+    <Container>
+      <Row className="row-content home">
+        <Col xs={12} className="centered flex-column gap-3">
+              <img id="profile" loading="lazy" className="img-fluid filter" src={id} alt="Anthony Bernard Cereno" />
+              <h2 className="job">
+                <span className="centered">Fullstack Web</span><span className="centered">Developer</span>
+              </h2>
+              <p>
+                I am passionate about helping businesses thrive in the digital
+                age
+              </p>
+              <h6 className="centered text-light animate">Services ↓</h6>
         </Col>
       </Row>
-    </>
+      <Row className="gap-5 g-0 py-5">
+        <Col className="box entering">
+          <div>
+            <p className="text-small">01</p>
+            <h3>HighLevel</h3>
+            <p>
+              I provide expert GoHighLevel integration to automate marketing,
+              boost lead generation, and simplify client management for your
+              business.
+            </p>
+          </div>
+          <Link className="butones" to={"/highlevel"}>About HighLevel</Link>
+        </Col>
+        <Col className="box entering">
+          <div>
+            <p className="text-small">02</p>
+            <h3>WEB-DEV</h3>
+            <p>
+              I develop modern, responsive websites and applications tailored to
+              your business needs, using cutting-edge technology for optimal
+              performance.
+            </p>
+          </div>
+          <Link className="butones" to={"/fullstack"}>About Development</Link>
+        </Col>
+        <Col className="box entering">
+          <div>
+            <p className="text-small">03</p>
+            <h3>E-commerce</h3>
+            <p>
+              I build and optimize online stores, ensuring smooth user
+              experiences and maximizing conversions through effective
+              e-commerce solutions.
+            </p>
+          </div>
+          <Link className="butones" to={"/ecommerce"}>About Ecommerce</Link>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
-
-
 .navibar{
-    position: relative !important;
-    font-family: "Protest Strike", sans-serif;
+    position: fixed !important;
     font-weight: 500;
     background: transparent;
     z-index: 10 !important;
+}
+.position-fixed.navbar{
+    left: 50%;
+    transform: translateX(-50%);
 }
 .navbar-toggler{
     background: white !important;
